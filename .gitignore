@@ -22,3 +22,5 @@ go.work
 # Power by yock, and NOT EDIT!!!
 
 include
+*.tar.gz
+*.zip

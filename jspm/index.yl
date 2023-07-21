@@ -1,0 +1,14 @@
+class jspm {
+    pm = {};
+
+
+    constructor(opt) {
+        switch (opt["module"] or "npm") {
+            case "npm":
+                this.pm = import("npm@1.0");
+            default:
+                throw "invalid package manager";
+        }
+
+    }
+}

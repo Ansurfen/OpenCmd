@@ -7,11 +7,25 @@ local cmake = function()
 end
 
 local version = function(opt)
-    cmake():add("--version"):exec({
-        redirect = opt["redirect"] or false
-    })
+    local res, err = cmake():add("--version"):exec({})
+    yassert(err)
+    if #res > 0 then
+        return string.match(string.gsub(res[1], "\n", ""), "cmake version (%d+%.%d+%.%d+)")
+    end
+    return ""
+end
+
+---@class cmakelists
+local cmakelists = {}
+
+---@param opt table
+local create = function(opt)
+    if not find(pathf((opt["dir"] or "./"), "CMakeLists.txt")) then
+        
+    end
 end
 
 return {
-    version = version
+    version = version,
+    create = create
 }

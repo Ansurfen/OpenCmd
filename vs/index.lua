@@ -1,3 +1,7 @@
+--  Copyright 2023 The OpenCmd Authors. All rights reserved.
+--  Use of this source code is governed by a MIT-style
+--  license that can be found in the LICENSE file.
+
 local channels = {
     ["master"] = { url = "https://aka.ms/vs/17/release/channel", id = "VisualStudio.17.Release" },
     ["2022_rc"] = { url = "https://aka.ms/vs/17/release/channel", id = "VisualStudio.17.Release" },

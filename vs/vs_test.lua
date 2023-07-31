@@ -1,3 +1,7 @@
+--  Copyright 2023 The OpenCmd Authors. All rights reserved.
+--  Use of this source code is governed by a MIT-style
+--  license that can be found in the LICENSE file.
+
 ---@diagnostic disable-next-line: undefined-global
 local vs_installer = import("vs@1.0")
 vs_installer.install({

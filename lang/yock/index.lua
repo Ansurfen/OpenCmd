@@ -20,5 +20,13 @@ local run = function(opt)
 end
 
 return {
-    run = run
+    run = run,
+    version = function()
+        local res, err = yock():add("version"):exec({})
+        yassert(err)
+        if #res > 0 then
+            return string.match(string.gsub(res[1], "\n", ""), "yock version: (%d+.%d+.%d+)")
+        end
+        return ""
+    end
 }

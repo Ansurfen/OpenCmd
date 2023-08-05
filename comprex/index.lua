@@ -18,13 +18,13 @@ local comprex = function(opt)
     end
     optional({
         case(checkModule("win-comprex"), OS("windows", "10+"), function()
-            cmp = import("../win-comprex/index")
+            cmp = import("./win-comprex/index")
         end),
         case(checkModule("bandizip"), Windows(), CheckEnv("bz -v", "Bandizip console tool"), function()
-            cmp = import("../bandizip/index")
+            cmp = import("./bandizip/index")
         end),
         case(checkModule("linux-comprex"), Linux(), function()
-            cmp = import("../linux-comprex/index")
+            cmp = import("./linux-comprex/index")
         end)
     }, function()
         yassert("no support platform")

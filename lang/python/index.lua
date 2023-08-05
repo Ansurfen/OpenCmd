@@ -14,8 +14,4 @@ function python:version()
     return sh(cmdf("python", "-V"))
 end
 
-function python:eval(code)
-
-end
-
 return python

@@ -2,7 +2,7 @@
 --  Use of this source code is governed by a MIT-style
 --  license that can be found in the LICENSE file.
 
-local cmdparse = import("../util/cmdparse")
+local cmdparse = import("../../util/cmdparse")
 
 local res = cmdparse(
     "docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:8.0.20", {
